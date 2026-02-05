@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 29, 2026, 11:18:36 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="in.co.rays.project_3.dto.ReportModuleDTO" table="REPORTMODULEDTO">
+        <id name="reportId" type="java.lang.Long">
+            <column name="REPORTID" />
+            <generator class="increment" />
+        </id>
+        <property name="reportName" type="java.lang.String">
+            <column name="REPORTNAME" />
+        </property>
+        <property name="generatedDate" type="java.util.Date">
+            <column name="GENERATEDDATE" />
+        </property>
+        <property name="generatedBy" type="java.lang.String">
+            <column name="GENERATEDBY" />
+        </property>
+        <property name="reportStatus" type="java.lang.String">
+            <column name="REPORTSTATUS" />
+        </property>
+    </class>
+</hibernate-mapping>

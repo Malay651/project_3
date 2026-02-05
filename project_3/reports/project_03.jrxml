@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="p3" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bb32f66a-369a-48c3-926c-28e28f61b479">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="project_3"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT ROLL_NO, NAME, PHYSICS, CHEMISTRY, MATHS, 
+			(PHYSICS + CHEMISTRY + MATHS) AS total 
+			FROM st_marksheet 
+			WHERE PHYSICS > 33 AND CHEMISTRY > 33 AND MATHS > 33 
+			ORDER BY total DESC 
+			LIMIT 0,10]]>
+	</queryString>
+	<field name="ROLL_NO" class="java.lang.String"/>
+	<field name="NAME" class="java.lang.String"/>
+	<field name="PHYSICS" class="java.lang.Integer"/>
+	<field name="CHEMISTRY" class="java.lang.Integer"/>
+	<field name="MATHS" class="java.lang.Integer"/>
+	<field name="total" class="java.lang.Long"/>
+	<variable name="serialNo" class="java.lang.Integer" incrementType="Group" incrementGroup="ROLL_NO" calculation="Count">
+		<variableExpression><![CDATA[$V{serialNo} == null ? 1 : $V{serialNo} + 1]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<group name="ROLL_NO">
+		<groupExpression><![CDATA[$F{ROLL_NO}]]></groupExpression>
+	</group>
+	<group name="NAME">
+		<groupExpression><![CDATA[$F{NAME}]]></groupExpression>
+	</group>
+	<group name="PHYSICS">
+		<groupExpression><![CDATA[$F{PHYSICS}]]></groupExpression>
+	</group>
+	<group name="CHEMISTRY">
+		<groupExpression><![CDATA[$F{CHEMISTRY}]]></groupExpression>
+	</group>
+	<group name="MATHS">
+		<groupExpression><![CDATA[$F{MATHS}]]></groupExpression>
+	</group>
+	<group name="total">
+		<groupExpression><![CDATA[$F{total}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="72" uuid="c9c1b48c-b137-4030-8cf1-559ed6905df9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="30" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Marksheet  Merit List]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30">
+			<staticText>
+				<reportElement x="0" y="5" width="70" height="20" uuid="b1492b20-87a1-4009-bdc1-f4da74591903"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[S No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="5" width="70" height="20" uuid="fdac1f68-fb4d-4b94-b23a-a8470215fb7a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ROLL_NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="5" width="90" height="20" uuid="538dbf6b-fa41-43b2-a339-1ff74dbc3690"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="5" width="75" height="20" uuid="a0b75b27-b0d0-458f-90fc-ce862388a7d8"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[PHYSICS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="5" width="85" height="20" uuid="e2c0c2ed-ae99-4a82-b725-bd20bac9712a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[CHEMISTRY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="5" width="75" height="20" uuid="9084b7d9-d75a-429c-88f4-73854c7825af"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[MATHS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="465" y="5" width="80" height="20" uuid="97c68c73-4192-463d-a11d-f366a5a2a4a0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25">
+			<textField>
+				<reportElement x="0" y="2" width="70" height="18" uuid="28474ee6-2158-4118-81b8-c0cd2b967175"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$V{serialNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="2" width="70" height="18" uuid="b147a89d-b7fa-4fa5-a20a-414235f9d989"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ROLL_NO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="2" width="90" height="18" uuid="e87977fb-601b-4b4f-b31c-1e493b1f4124"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="2" width="75" height="18" uuid="d6fadb7c-9b26-4f43-9492-9e3d2d2af2d4"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{PHYSICS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="305" y="2" width="85" height="18" uuid="d6b0aa74-1bd0-435f-837e-3ce387489072"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CHEMISTRY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="2" width="75" height="18" uuid="5d008993-1981-4121-b4c7-f0ed9f0bac93"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{MATHS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="465" y="2" width="80" height="18" uuid="dad767d6-20f8-411a-9898-5b5470001982"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54"/>
+	</pageFooter>
+	<summary>
+		<band height="42"/>
+	</summary>
+</jasperReport>
