@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 3, 2026, 11:25:22 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <subclass name="in.co.rays.project_3.dto.JobApplicationDTO" extends="in.co.rays.project_3.dto.BaseDTO" discriminator-value="JobApplicationDTO" lazy="false">
+        <property name="applicationName" type="java.lang.String">
+            <column name="APPLICATIONNAME" />
+        </property>
+        <property name="applicationStatus" type="java.lang.String">
+            <column name="APPLICATIONSTATUS" />
+        </property>
+        <property name="jobTitle" type="java.lang.String">
+            <column name="JOBTITLE" />
+        </property>
+        <property name="interviewDate" type="java.util.Date">
+            <column name="INTERVIEWDATE" />
+        </property>
+        <property name="resumeLink" type="java.lang.String">
+            <column name="RESUMELINK" />
+        </property>
+        <property name="applicationDate" type="java.util.Date">
+            <column name="APPLICATIONDATE" />
+        </property>
+    </subclass>
+</hibernate-mapping>

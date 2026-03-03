@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 24, 2026, 11:13:17 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="in.co.rays.project_3.dto">
+
+	<class name="BatchDTO" table="ST_BATCH">
+
+		<!-- Primary Key -->
+		<id name="id" type="java.lang.Long">
+			<column name="ID"></column>
+			<generator class="increment"></generator>
+		</id>
+
+		<!-- Batch Fields -->
+		<property name="batchCode" type="java.lang.String">
+			<column name="BATCH_CODE" />
+		</property>
+
+		<property name="batchName" type="java.lang.String">
+			<column name="BATCH_NAME" />
+		</property>
+
+		<property name="trainerName" type="java.lang.String">
+			<column name="TRAINER_NAME" />
+		</property>
+
+		<property name="batchTiming" type="java.lang.String">
+			<column name="BATCH_TIMING" />
+		</property>
+
+		<!-- BaseDTO Fields -->
+		<property name="createdBy" type="java.lang.String" length="50">
+			<column name="CREATED_BY" />
+		</property>
+
+		<property name="modifiedBy" type="java.lang.String" length="50">
+			<column name="MODIFIED_BY" />
+		</property>
+
+		<property name="createdDatetime" type="java.sql.Timestamp">
+			<column name="CREATED_DATETIME" />
+		</property>
+
+		<property name="modifiedDatetime" type="java.sql.Timestamp">
+			<column name="MODIFIED_DATETIME" />
+		</property>
+
+	</class>
+
+</hibernate-mapping>

@@ -14,7 +14,7 @@ public class DataUtility {
 /**
 * Application time data formate
 */
-public static final String APP_DATE_FORMATE="MM/dd/yyyy";
+public static final String APP_DATE_FORMATE="yyyy-MM-dd";
 	
 public static final String APP_TIME_FORMATE="MM/dd/yyyy HH:mm:ss";
 	
@@ -195,4 +195,6 @@ return tm.getTime();
 return 0;
 }
 }
+
+
 }

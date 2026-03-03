@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 3, 2026, 11:25:22 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <subclass name="in.co.rays.project_3.dto.BatchDTO" extends="in.co.rays.project_3.dto.BaseDTO" discriminator-value="BatchDTO" lazy="false">
+        <property name="batchCode" type="java.lang.String">
+            <column name="BATCHCODE" />
+        </property>
+        <property name="batchName" type="java.lang.String">
+            <column name="BATCHNAME" />
+        </property>
+        <property name="trainerName" type="java.lang.String">
+            <column name="TRAINERNAME" />
+        </property>
+        <property name="batchTiming" type="java.lang.String">
+            <column name="BATCHTIMING" />
+        </property>
+    </subclass>
+</hibernate-mapping>

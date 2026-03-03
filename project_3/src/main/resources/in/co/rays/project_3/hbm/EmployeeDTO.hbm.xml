@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 23, 2026, 11:06:29 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="in.co.rays.project_3.dto">
+
+	<class name="EmployeeDTO" table="ST_EMPLOYEE">
+
+		<!-- Primary Key (from BaseDTO) -->
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="increment" />
+		</id>
+
+		<!-- Employee Fields -->
+
+		<property name="employeeCode" type="java.lang.String">
+			<column name="EMPLOYEE_CODE" />
+		</property>
+
+		<property name="employeeName" type="java.lang.String">
+			<column name="EMPLOYEE_NAME" />
+		</property>
+
+		<property name="department" type="java.lang.String">
+			<column name="DEPARTMENT" />
+		</property>
+
+		<property name="email" type="java.lang.String">
+			<column name="EMAIL" />
+		</property>
+
+		<property name="designation" type="java.lang.String">
+			<column name="DESIGNATION" />
+		</property>
+
+		<!-- Common Fields (from BaseDTO) -->
+
+		<property name="createdBy" type="java.lang.String">
+			<column name="CREATED_BY" />
+		</property>
+
+		<property name="modifiedBy" type="java.lang.String">
+			<column name="MODIFIED_BY" />
+		</property>
+
+		<property name="createdDatetime" type="java.sql.Timestamp">
+			<column name="CREATED_DATETIME" />
+		</property>
+
+		<property name="modifiedDatetime" type="java.sql.Timestamp">
+			<column name="MODIFIED_DATETIME" />
+		</property>
+
+	</class>
+
+</hibernate-mapping>

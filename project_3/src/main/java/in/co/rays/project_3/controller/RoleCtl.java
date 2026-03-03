@@ -22,7 +22,7 @@ import in.co.rays.project_3.util.ServletUtility;
 
 /**
  * role functionality controller.to perform add,delete ,update operation
- * @author Anshul Prajapati
+ * @author malay dongre
  *
  */
 @WebServlet(urlPatterns = { "/ctl/RoleCtl" })

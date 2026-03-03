@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 3, 2026, 11:25:22 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <subclass name="in.co.rays.project_3.dto.LibraryDTO" extends="in.co.rays.project_3.dto.BaseDTO" discriminator-value="LibraryDTO" lazy="false">
+        <property name="bookCode" type="java.lang.String">
+            <column name="BOOKCODE" />
+        </property>
+        <property name="authorName" type="java.lang.String">
+            <column name="AUTHORNAME" />
+        </property>
+        <property name="availabilityStatus" type="java.lang.String">
+            <column name="AVAILABILITYSTATUS" />
+        </property>
+        <property name="bookName" type="java.lang.String">
+            <column name="BOOKNAME" />
+        </property>
+    </subclass>
+</hibernate-mapping>

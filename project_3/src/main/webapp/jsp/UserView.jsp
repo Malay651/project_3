@@ -288,7 +288,7 @@ i.css {
 								%>
 								<div class="text-center">
 
-									<input type="submit" name="operation class=" btn btn-success btn-md" style="font-size: 17px"
+									<input type="submit" name="operation" class=" btn btn-success btn-md" style="font-size: 17px"
 										value="<%=UserCtl.OP_SAVE%>"> 
 										<input type="submit" name="operation" class="btn btn-warning btn-md"
 										style="font-size: 17px" value="<%=UserCtl.OP_RESET%>">

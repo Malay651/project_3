@@ -3,8 +3,6 @@ package in.co.rays.project_3.model;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
-import in.co.rays.proj_3.model.ReportModuleJdbcImpl;
-
 /**
  * ModelFactory decides which model implementation run
  * 
@@ -42,21 +40,6 @@ public final class ModelFactory {
 		}
 		return productModel;
 	}
-	
-	public ReportModuleModelInt getreportmodule() {
-		ReportModuleModelInt reportmodel = (ReportModuleModelInt) modelCache.get("reportmodel");
-		if (reportmodel == null) {
-			if ("Hibernate".equals(DATABASE)) {
-				reportmodel = new ReportModuleHibImpl();
-			}
-			if ("JDBC".equals(DATABASE)) {
-				reportmodel =new ReportModuleHibImpl();
-			}
-			modelCache.put("productModel", reportmodel);
-		}
-		return reportmodel;
-	}
-
 
 	public MarksheetModelInt getMarksheetModel() {
 		MarksheetModelInt marksheetModel = (MarksheetModelInt) modelCache.get("marksheetModel");
@@ -194,4 +177,125 @@ public final class ModelFactory {
 
 		return facultyModel;
 	}
+
+	public ContactModelInt getContactModel() {
+		ContactModelInt ContactModel = (ContactModelInt) modelCache.get("ContactModel");
+		if (ContactModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				ContactModel = new ContactModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+				ContactModel = new ContactModelJDBCImpl();
+			}
+			modelCache.put("contactModel", ContactModel);
+		}
+
+		return ContactModel;
+	}
+
+
+	public EmployeeModelInt getEmployeeModel() {
+		// TODO Auto-generated method stub
+		EmployeeModelInt EmployeeModel = (EmployeeModelInt) modelCache.get("EmployeeModel");
+		if (EmployeeModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				EmployeeModel = new EmployeeModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+				EmployeeModel = new EmployeeModelHibImpl();
+			}
+			modelCache.put("employeeModel", EmployeeModel);
+		}
+
+		return EmployeeModel;
+
+	}
+	
+	public BatchModelInt getBatchModel() {
+		// TODO Auto-generated method stub
+		BatchModelInt BatchModel = (BatchModelInt) modelCache.get("BatchModel");
+		if (BatchModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				BatchModel = new BatchModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+				BatchModel = new BatchModelHibImpl();
+			}
+			modelCache.put("BatchModel", BatchModel);
+		}
+
+		return BatchModel;
+
+	}
+
+	public LibraryModelInt getLibraryModel() {
+		// TODO Auto-generated method stub
+		LibraryModelInt LibraryModel = (LibraryModelInt) modelCache.get("LibraryModel");
+		if (LibraryModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				LibraryModel = new LibraryModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+				LibraryModel = new LibraryModelHibImpl();
+			}
+			modelCache.put("LibraryModel", LibraryModel);
+		}
+
+		return LibraryModel;
+
+	}
+
+	public JobApplicationModelInt getJobApplicationModel() {
+		
+		// TODO Auto-generated method stub
+		JobApplicationModelInt JobApplicationModel = (JobApplicationModelInt) modelCache.get("JobApplicationModel");
+		if (JobApplicationModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				JobApplicationModel = new JobApplicationModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+				JobApplicationModel = new JobApplicationModelHibImpl();
+			}
+			modelCache.put("JobApplicationModel", JobApplicationModel);
+		}
+
+		return JobApplicationModel;
+
+	}
+	
+     public PaymentModelInt getPaymentModel() {
+		
+	PaymentModelInt PaymentModel = (PaymentModelInt) modelCache.get("PaymentModel");
+		if (PaymentModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				PaymentModel = new PaymentModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+				PaymentModel = new PaymentModelHibImpl();
+			}
+			modelCache.put("PaymentModel", PaymentModel);
+		}
+
+		return PaymentModel;
+
+	}
+
+
+     public StockModelInt getStockModel() {
+		
+    	 StockModelInt StockModel = (StockModelInt) modelCache.get("StockModel");
+		if (StockModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				StockModel = new StockModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+				StockModel = new StockModelHibImpl();
+			}
+			modelCache.put("StockModel", StockModel);
+		}
+
+		return StockModel;
+
+	}
+
 }

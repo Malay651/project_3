@@ -46,6 +46,26 @@ public interface ORSView {
 	public String PRODUCT_VIEW = PAGE_FOLDER + "/ProductView.jsp";
 	public String PRODUCT_LIST_VIEW = PAGE_FOLDER + "/ProductListView.jsp";
 
+	public String EMPLOYEE_VIEW = PAGE_FOLDER + "/EmployeeView.jsp";
+	public String EMPLOYEE_LIST_VIEW = PAGE_FOLDER + "/EmployeeListView.jsp";
+
+	public String CONTACT_VIEW = PAGE_FOLDER + "/ContactView.jsp";
+	public String CONTACT_LIST_VIEW = PAGE_FOLDER + "/ContactListView.jsp";
+
+	public String BATCH_VIEW = PAGE_FOLDER + "/BatchView.jsp";
+	public String BATCH_LIST_VIEW = PAGE_FOLDER + "/BatchListView.jsp";
+
+	public String LIBRARY_VIEW = PAGE_FOLDER + "/LibraryView.jsp";
+	public String LIBRARY_LIST_VIEW = PAGE_FOLDER + "/LibraryListView.jsp";
+
+	public String JOB_APPLICATION_VIEW = PAGE_FOLDER + "/JobApplicationView.jsp";
+	public String JOB_APPLICATION_LIST_VIEW = PAGE_FOLDER + "/JobApplicationListView.jsp";
+
+	public String PAYMENT_VIEW = PAGE_FOLDER + "/PaymentView.jsp";
+	public String PAYMENT_LIST_VIEW = PAGE_FOLDER + "/PaymentListView.jsp";
+
+	public String STOCK_VIEW = PAGE_FOLDER + "/StockView.jsp";
+	public String STOCK_LIST_VIEW = PAGE_FOLDER + "/StockListView.jsp";
 
 	public String ERROR_CTL = APP_CONTEXT + "/ErrorCtl";
 
@@ -73,6 +93,8 @@ public interface ORSView {
 	public String TIMETABLE_LIST_CTL = APP_CONTEXT + "/ctl/TimeTableListCtl";
 	public String PRODUCT_CTL = APP_CONTEXT + "/ctl/ProductCtl";
 	public String PRODUCT_LIST_CTL = APP_CONTEXT + "/ctl/ProductListCtl";
+	public String CONTACT_CTL = APP_CONTEXT + "/ctl/ContactCtl";
+	public String CONTACT_LIST_CTL = APP_CONTEXT + "/ctl/ContactListCtl";
 
 	public String GET_MARKSHEET_CTL = APP_CONTEXT + "/ctl/GetMarksheetCtl";
 	public String CHANGE_PASSWORD_CTL = APP_CONTEXT + "/ctl/ChangePasswordCtl";
@@ -80,7 +102,23 @@ public interface ORSView {
 	public String FORGET_PASSWORD_CTL = APP_CONTEXT + "/ForgetPasswordCtl";
 	public String MARKSHEET_MERIT_LIST_CTL = APP_CONTEXT + "/ctl/MarksheetMeritListCtl";
 	
-	public String REPORTMODULE_CTL = APP_CONTEXT + "/ctl/ORSView.REPORTMODULE_CTL";
-	public String REPORTMODULE_LIST_CTL = APP_CONTEXT + "/ctl/ORSView.REPORTMODULE_LIST_CTL";
+	public String EMPLOYEE_CTL = APP_CONTEXT + "/ctl/EmployeeCtl";
+	public String EMPLOYEE_LIST_CTL = APP_CONTEXT + "/ctl/EmployeeListCtl";
+
+	public String BATCH_CTL = APP_CONTEXT + "/ctl/BatchCtl";
+	public String BATCH_LIST_CTL = APP_CONTEXT + "/ctl/BatchListCtl";
+
+	public String LIBRARY_CTL = APP_CONTEXT + "/ctl/LibraryCtl";
+	public String LIBRARY_LIST_CTL = APP_CONTEXT + "/ctl/LibraryListCtl";
+
+	public String JOB_APPLICATION_CTL = APP_CONTEXT + "/ctl/JobApplicationCtl";
+	public String JOB_APPLICATION_LIST_CTL = APP_CONTEXT + "/ctl/JobApplicationListCtl";
+
+	public String PAYMENT_CTL = APP_CONTEXT + "/ctl/PaymentCtl";
+	public String PAYMENT_LIST_CTL = APP_CONTEXT + "/ctl/PaymentListCtl";
+
+	public String STOCK_CTL = APP_CONTEXT + "/ctl/StockCtl";
+	public String STOCK_LIST_CTL = APP_CONTEXT + "/ctl/StockListCtl";
+
 
 }

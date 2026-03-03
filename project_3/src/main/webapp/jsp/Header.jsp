@@ -209,20 +209,7 @@
 						</a>
 					</div></li>
 
-				<li class="nav-item dropdown" style="padding-left: 5px"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: white;">ReportModule
-					</font></a>
-
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-						<a class="dropdown-item" href="<%=ORSView.REPORTMODULE_CTL%>"><i
-							class="fa fa-file"></i>Add Reportmodule</a> <a class="dropdown-item"
-							href="<%=ORSView.REPORTMODULE_LIST_CTL%>"><i class="fa fa-paste"></i>REPORTMODULE
-							List</a>
-					</div></li>
-
+				
                  <li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -237,6 +224,92 @@
 							List</a>
 					</div></li>
                  
+                      <li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Contact
+					</font></a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="<%=ORSView.CONTACT_CTL%>">
+						<i class="fa fa-file"></i>Add Contact</a> 
+					<a class="dropdown-item" href="<%=ORSView.CONTACT_LIST_CTL%>">
+					       <i class="fa fa-paste"></i>Contact List</a>
+					</div></li>
+                 
+                 <li class="nav-item dropdown" style="padding-left: 5px;"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Employee</font>
+				</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="<%=ORSView.EMPLOYEE_CTL%>"><i
+							class="fa fa-user-circle"></i>Add Employee</a> <a class="dropdown-item"
+							href="<%=ORSView.EMPLOYEE_LIST_CTL%>"><i
+							class="fa fa-user-friends"></i>Employee List</a>
+					</div></li>
+                                  <li class="nav-item dropdown" style="padding-left: 5px;"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Batch</font>
+				</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="<%=ORSView.BATCH_CTL%>"><i
+							class="fa fa-user-circle"></i>Add Batch</a> <a class="dropdown-item"
+							href="<%=ORSView.BATCH_LIST_CTL%>"><i
+							class="fa fa-user-friends"></i>Batch List</a>
+					</div></li>
+                
+                    <li class="nav-item dropdown" style="padding-left: 5px;"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Library</font>
+				</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="<%=ORSView.LIBRARY_CTL%>"><i
+							class="fa fa-user-circle"></i>Add Library</a> <a class="dropdown-item"
+							href="<%=ORSView.LIBRARY_LIST_CTL%>"><i
+							class="fa fa-user-friends"></i>Library List</a>
+					</div></li>
+                
+                                    <li class="nav-item dropdown" style="padding-left: 5px;"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">JobApplication</font>
+				</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="<%=ORSView.JOB_APPLICATION_CTL%>"><i
+							class="fa fa-user-circle"></i>Add JobApplication</a> <a class="dropdown-item"
+							href="<%=ORSView.JOB_APPLICATION_LIST_CTL%>"><i
+							class="fa fa-user-friends"></i>JobApplication List</a>
+					</div></li>
+					
+					          <li class="nav-item dropdown" style="padding-left: 5px;"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Payment</font>
+				</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="<%=ORSView.PAYMENT_CTL%>"><i
+							class="fa fa-user-circle"></i>Add Payment</a> <a class="dropdown-item"
+							href="<%=ORSView.PAYMENT_LIST_CTL%>"><i
+							class="fa fa-user-friends"></i>Payment List</a>
+					</div></li>
+                
+                          <li class="nav-item dropdown" style="padding-left: 5px;"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Stock</font>
+				</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="<%=ORSView.STOCK_CTL%>"><i
+							class="fa fa-user-circle"></i>Add Stock</a> <a class="dropdown-item"
+							href="<%=ORSView.STOCK_LIST_CTL%>"><i
+							class="fa fa-user-friends"></i>Stock List</a>
+					</div></li>
+                
+                
 				<%
 					}
 					}

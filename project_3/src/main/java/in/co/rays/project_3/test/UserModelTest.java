@@ -104,21 +104,18 @@ public class UserModelTest {
 		UserDTO dto = new UserDTO();
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 		
-		dto.setFirstName("Yash");
-		dto.setLastName("Kanoongo");
+		dto.setFirstName("malay");
+		dto.setLastName("dongre");
 		dto.setDob(sdf.parse("13-05-1999"));
-		dto.setConfirmPassword("Yash@12345");
-		dto.setPassword("Yash@12345");
-		dto.setLogin("yashkanoongo493@gmail.com");
+		dto.setConfirmPassword("malay@123");
+		dto.setPassword("malay@123");
+		dto.setLogin("malay@gmail.com");
 		dto.setGender("male");
-		dto.setUnSuccessfullLogin(2);
 
 		dto.setCreatedBy("admin");
 		dto.setModifiedBy("admin");
 		dto.setRoleId(1);
 		dto.setMobileNo("9406653787");
-		dto.setRegisteredIP("yashkanoongo493@gmail.com");
-		dto.setLoginIP("yashkanoongo493@gmail.com");
 		dto.setLastLogin(new Timestamp(new Date().getTime()));
 		dto.setCreatedDatetime(new Timestamp(new Date().getTime()));
 		dto.setModifiedDatetime(new Timestamp(new Date().getTime()));

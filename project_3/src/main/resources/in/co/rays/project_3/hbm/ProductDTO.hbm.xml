@@ -22,5 +22,18 @@
 		<property name="productCategory" type="java.lang.String">
 			<column name="PRODUCTCATEGORY" />
 		</property>
+		<property name="createdBy" type="java.lang.String" length="50">
+			<column name="CREATED_BY" />
+		</property>
+		<property name="modifiedBy" type="java.lang.String" length="50">
+			<column name="MODIFIED_BY" />
+		</property>
+		<property name="createdDatetime" type="java.sql.Timestamp">
+			<column name="CREATED_DATETIME" />
+		</property>
+		<property name="modifiedDatetime" type="java.sql.Timestamp">
+			<column name="MODIFIED_DATETIME" />
+		</property>
+		
 	</class>
 </hibernate-mapping>

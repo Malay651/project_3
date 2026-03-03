@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 3, 2026, 11:25:22 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <subclass name="in.co.rays.project_3.dto.ContactDTO" extends="in.co.rays.project_3.dto.BaseDTO" discriminator-value="ContactDTO" lazy="false">
+        <property name="contactId" type="java.lang.Long">
+            <column name="CONTACTID" />
+        </property>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="mobileNo" type="java.lang.String">
+            <column name="MOBILENO" />
+        </property>
+        <property name="message" type="java.lang.String">
+            <column name="MESSAGE" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" />
+        </property>
+    </subclass>
+</hibernate-mapping>
