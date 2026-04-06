@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 11, 2026, 11:48:18 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <subclass name="in.co.rays.project_3.dto.BranchDTO" extends="in.co.rays.project_3.dto.BaseDTO" discriminator-value="BranchDTO" lazy="false">
+        <property name="branchCode" type="java.lang.String">
+            <column name="BRANCHCODE" />
+        </property>
+        <property name="branchLocation" type="java.lang.String">
+            <column name="BRANCHLOCATION" />
+        </property>
+        <property name="branchStatus" type="java.lang.String">
+            <column name="BRANCHSTATUS" />
+        </property>
+        <property name="branchName" type="java.lang.String">
+            <column name="BRANCHNAME" />
+        </property>
+    </subclass>
+</hibernate-mapping>

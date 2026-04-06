@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 11, 2026, 11:48:18 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <subclass name="in.co.rays.project_3.dto.ClaimDTO" extends="in.co.rays.project_3.dto.BaseDTO" discriminator-value="ClaimDTO" lazy="false">
+        <property name="claimNumber" type="java.lang.String">
+            <column name="CLAIMNUMBER" />
+        </property>
+        <property name="claimAmount" type="java.lang.Long">
+            <column name="CLAIMAMOUNT" />
+        </property>
+        <property name="status" type="java.lang.String">
+            <column name="STATUS" />
+        </property>
+    </subclass>
+</hibernate-mapping>
