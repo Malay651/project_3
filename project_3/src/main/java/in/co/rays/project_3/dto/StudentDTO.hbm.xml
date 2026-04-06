@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Mar 3, 2026, 11:25:22 AM by Hibernate Tools 3.5.0.Final -->
+<!-- Generated Mar 11, 2026, 11:48:18 AM by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
     <subclass name="in.co.rays.project_3.dto.StudentDTO" extends="in.co.rays.project_3.dto.BaseDTO" discriminator-value="StudentDTO" lazy="false">
         <property name="id" type="java.lang.Long">

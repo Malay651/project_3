@@ -67,6 +67,19 @@ public interface ORSView {
 	public String STOCK_VIEW = PAGE_FOLDER + "/StockView.jsp";
 	public String STOCK_LIST_VIEW = PAGE_FOLDER + "/StockListView.jsp";
 
+	public String TOUR_GUIDE_BOOKING_VIEW = PAGE_FOLDER + "/TourGuideBookingView.jsp";
+	public String TOUR_GUIDE_BOOKING_LIST_VIEW = PAGE_FOLDER + "/TourGuideBookingListView.jsp";
+	
+	public String CLAIM_VIEW = PAGE_FOLDER + "/ClaimView.jsp";
+	public String CLAIM_LIST_VIEW = PAGE_FOLDER + "/ClaimListView.jsp";
+
+	public String BRANCH_VIEW = PAGE_FOLDER + "/BranchView.jsp";
+	public String BRANCH_LIST_VIEW = PAGE_FOLDER + "/BranchListView.jsp";
+
+	public String DONATIONCAMP_VIEW = PAGE_FOLDER + "/DonationCampView.jsp";
+	public String DONATIONCAMP_LIST_VIEW = PAGE_FOLDER + "/DonationCampListView.jsp";
+
+	
 	public String ERROR_CTL = APP_CONTEXT + "/ErrorCtl";
 
 	public String MARKSHEET_CTL = APP_CONTEXT + "/ctl/MarksheetCtl";
@@ -119,6 +132,17 @@ public interface ORSView {
 
 	public String STOCK_CTL = APP_CONTEXT + "/ctl/StockCtl";
 	public String STOCK_LIST_CTL = APP_CONTEXT + "/ctl/StockListCtl";
+	
+	public String CLAIM_CTL = APP_CONTEXT + "/ctl/ClaimCtl";
+	public String CLAIM_LIST_CTL = APP_CONTEXT + "/ctl/ClaimListCtl";
 
+	public String BRANCH_CTL = APP_CONTEXT + "/ctl/BranchCtl";
+	public String BRANCH_LIST_CTL = APP_CONTEXT + "/ctl/BranchListCtl";
+
+	public String TOUR_GUIDE_BOOKING_CTL = APP_CONTEXT + "/ctl/TourGuideBookingCtl";
+	public String TOUR_GUIDE_BOOKING_LIST_CTL = APP_CONTEXT + "/ctl/TourGuideBookingListCtl";
+
+	public String DONATIONCAMP_CTL = APP_CONTEXT + "/ctl/DonationCampCtl";
+	public String DONATIONCAMP_LIST_CTL = APP_CONTEXT + "/ctl/DonationCampListCtl";
 
 }

@@ -1,47 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-
-<hibernate-mapping package="in.co.rays.project_3.dto">
-
-	<class name="StockDTO" table="ST_STOCK">
-
-		<!-- Primary Key -->
-		<id name="id" type="java.lang.Long">
-			<column name="ID"></column>
-			<generator class="increment"></generator>
-		</id>
-
-		<!-- Stock Fields -->
-		<property name="stockName" type="java.lang.String">
-			<column name="STOCK_NAME" />
-		</property>
-
-		<property name="price" type="java.lang.Long">
-			<column name="PRICE" />
-		</property>
-
-		<property name="quantity" type="int">
-			<column name="QUANTITY" />
-		</property>
-
-		<!-- BaseDTO Fields -->
-		<property name="createdBy" type="java.lang.String" length="50">
-			<column name="CREATED_BY" />
-		</property>
-
-		<property name="modifiedBy" type="java.lang.String" length="50">
-			<column name="MODIFIED_BY" />
-		</property>
-
-		<property name="createdDatetime" type="java.sql.Timestamp">
-			<column name="CREATED_DATETIME" />
-		</property>
-
-		<property name="modifiedDatetime" type="java.sql.Timestamp">
-			<column name="MODIFIED_DATETIME" />
-		</property>
-
-	</class>
-
+<!-- Generated Mar 11, 2026, 11:48:18 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <subclass name="in.co.rays.project_3.dto.StockDTO" extends="in.co.rays.project_3.dto.BaseDTO" discriminator-value="StockDTO" lazy="false">
+        <property name="stockName" type="java.lang.String">
+            <column name="STOCKNAME" />
+        </property>
+        <property name="quantity" type="int">
+            <column name="QUANTITY" />
+        </property>
+        <property name="price" type="java.lang.Long">
+            <column name="PRICE" />
+        </property>
+    </subclass>
 </hibernate-mapping>

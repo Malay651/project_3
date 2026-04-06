@@ -297,5 +297,74 @@ public final class ModelFactory {
 		return StockModel;
 
 	}
+    
+     public ClaimModelInt getClaimModel() {
+ 		
+    	 ClaimModelInt ClaimModel = (ClaimModelInt) modelCache.get("ClaimModel");
+		if (ClaimModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				ClaimModel = new ClaimModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+				ClaimModel = new ClaimModelHibImpl();
+			}
+			modelCache.put("ClaimModel", ClaimModel);
+		}
+
+		return ClaimModel;
+
+	}
+  
+     public TourGuideBookingModelInt getTourGuideBookingModel() {
+  		
+    	 TourGuideBookingModelInt TourGuideBookingModel = (TourGuideBookingModelInt) modelCache.get("TourGuideBookingModel");
+		if (TourGuideBookingModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				TourGuideBookingModel = new TourGuideBookingModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+				TourGuideBookingModel = new TourGuideBookingModelHibImpl();
+			}
+			modelCache.put("TourGuideBookingModel", TourGuideBookingModel);
+		}
+
+		return TourGuideBookingModel;
+
+	}
+     
+     public BranchModelInt getBranchModel() {
+  		
+    	 BranchModelInt BranchModel = (BranchModelInt) modelCache.get("BranchModel");
+		if (BranchModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				BranchModel = new BranchModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+				BranchModel = new BranchModelHibImpl();
+			}
+			modelCache.put("BranchModel", BranchModel);
+		}
+
+		return BranchModel;
+
+	}
+
+     public DonationCampModelInt getDonationCampModel() {
+   		
+    	 DonationCampModelInt DonationCampModel = (DonationCampModelInt) modelCache.get("DonationCampModel");
+		if (DonationCampModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				DonationCampModel = new DonationCampModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+				DonationCampModel = new DonationCampModelHibImpl();
+			}
+			modelCache.put("DonationCampModel", DonationCampModel);
+		}
+
+		return DonationCampModel;
+
+	}
+
 
 }

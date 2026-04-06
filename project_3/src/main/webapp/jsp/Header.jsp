@@ -309,6 +309,50 @@
 							class="fa fa-user-friends"></i>Stock List</a>
 					</div></li>
                 
+                                          <li class="nav-item dropdown" style="padding-left: 5px;"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Claim</font>
+				</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="<%=ORSView.CLAIM_CTL%>"><i
+							class="fa fa-user-circle"></i>Add Claim</a> <a class="dropdown-item"
+							href="<%=ORSView.CLAIM_LIST_CTL%>"><i
+							class="fa fa-user-friends"></i>Claim List</a>
+					</div></li>
+                                                          <li class="nav-item dropdown" style="padding-left: 5px;"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">TourGuideBooking</font>
+				</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="<%=ORSView.TOUR_GUIDE_BOOKING_CTL%>"><i
+							class="fa fa-user-circle"></i>Add Tour Guide Booking</a> <a class="dropdown-item"
+							href="<%=ORSView.TOUR_GUIDE_BOOKING_LIST_CTL%>"><i
+							class="fa fa-user-friends"></i>Tour Guide Booking List</a>
+					</div></li>
+                                               <li class="nav-item dropdown" style="padding-left: 5px;"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Branch</font>
+				</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="<%=ORSView.BRANCH_CTL%>"><i
+							class="fa fa-user-circle"></i>Add Branch</a> <a class="dropdown-item"
+							href="<%=ORSView.BRANCH_LIST_CTL%>"><i
+							class="fa fa-user-friends"></i>Branch List</a>
+					</div></li>
+                <li class="nav-item dropdown" style="padding-left: 5px;"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">DonationCamp</font>
+				</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="<%=ORSView.DONATIONCAMP_CTL%>"><i
+							class="fa fa-user-circle"></i>Add DonationCamp</a> <a class="dropdown-item"
+							href="<%=ORSView.DONATIONCAMP_LIST_CTL%>"><i
+							class="fa fa-user-friends"></i>DonationCamp List</a>
+					</div></li>
                 
 				<%
 					}
