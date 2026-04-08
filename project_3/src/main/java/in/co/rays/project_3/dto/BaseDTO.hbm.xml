@@ -1,17 +1,18 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Mar 11, 2026, 11:48:18 AM by Hibernate Tools 3.5.0.Final -->
+<!-- Generated Apr 8, 2026, 11:38:29 AM by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <subclass name="in.co.rays.project_3.dto.BaseDTO" extends="in.co.rays.project_3.dto.DropdownList" discriminator-value="BaseDTO" lazy="false" abstract="true">
-        <property name="id" type="java.lang.Long">
+    <class name="in.co.rays.project_3.dto.BaseDTO" table="BASEDTO" abstract="true">
+        <id name="id" type="java.lang.Long">
             <column name="ID" />
-        </property>
+            <generator class="assigned" />
+        </id>
+        <discriminator type="string">
+            <column name="DISCR_COL" />
+        </discriminator>
         <property name="createdBy" type="java.lang.String">
             <column name="CREATEDBY" />
-        </property>
-        <property name="modifiedDatetime" type="java.sql.Timestamp">
-            <column name="MODIFIEDDATETIME" />
         </property>
         <property name="modifiedBy" type="java.lang.String">
             <column name="MODIFIEDBY" />
@@ -19,5 +20,8 @@
         <property name="createdDatetime" type="java.sql.Timestamp">
             <column name="CREATEDDATETIME" />
         </property>
-    </subclass>
+        <property name="modifiedDatetime" type="java.sql.Timestamp">
+            <column name="MODIFIEDDATETIME" />
+        </property>
+    </class>
 </hibernate-mapping>

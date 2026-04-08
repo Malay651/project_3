@@ -79,6 +79,9 @@ public interface ORSView {
 	public String DONATIONCAMP_VIEW = PAGE_FOLDER + "/DonationCampView.jsp";
 	public String DONATIONCAMP_LIST_VIEW = PAGE_FOLDER + "/DonationCampListView.jsp";
 
+	public String CURRENCY_VIEW = PAGE_FOLDER + "/CurrencyView.jsp";
+	public String CURRENCY_LIST_VIEW = PAGE_FOLDER + "/CurrencyListView.jsp";
+
 	
 	public String ERROR_CTL = APP_CONTEXT + "/ErrorCtl";
 
@@ -144,5 +147,8 @@ public interface ORSView {
 
 	public String DONATIONCAMP_CTL = APP_CONTEXT + "/ctl/DonationCampCtl";
 	public String DONATIONCAMP_LIST_CTL = APP_CONTEXT + "/ctl/DonationCampListCtl";
+
+	public String CURRENCY_CTL = APP_CONTEXT + "/ctl/CurrencyCtl";
+	public String CURRENCY_LIST_CTL = APP_CONTEXT + "/ctl/CurrencyListCtl";
 
 }

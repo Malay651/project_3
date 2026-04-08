@@ -366,5 +366,21 @@ public final class ModelFactory {
 
 	}
 
+     public CurrencyModelInt getCurrencyModel() {
+    		
+    	 CurrencyModelInt CurrencyModel = (CurrencyModelInt) modelCache.get("CurrencyModel");
+		if (CurrencyModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				CurrencyModel = new CurrencyModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+				CurrencyModel = new CurrencyModelHibImpl();
+			}
+			modelCache.put("CurrencyModel", CurrencyModel);
+		}
+
+		return CurrencyModel;
+
+	}
 
 }

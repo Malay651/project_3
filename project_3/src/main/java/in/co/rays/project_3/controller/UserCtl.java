@@ -1,6 +1,7 @@
 package in.co.rays.project_3.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -26,7 +27,8 @@ import in.co.rays.project_3.util.ServletUtility;
 
 /**
  * user functionality controller.to perform add,delete and update operation
- * @author malay dongre
+ * 
+ * @author krati
  *
  */
 @WebServlet(urlPatterns = { "/ctl/UserCtl" })
@@ -41,28 +43,24 @@ public class UserCtl extends BaseCtl {
 		RoleModelInt model = ModelFactory.getInstance().getRoleModel();
 		try {
 			List list = model.list();
-			Iterator it = list.iterator();
-			while(it.hasNext()) {
-				RoleDTO dto=(RoleDTO) it.next();
-				System.out.println(dto.getId());
-				System.out.println(dto.getName());
-				System.out.println(dto.getDescription());
-				
-			}
-			
+			/*
+			 * Iterator it = list.iterator(); while (it.hasNext()) { RoleDTO dto = (RoleDTO)
+			 * it.next(); System.out.println(dto.getId());
+			 * System.out.println(dto.getName()); System.out.println(dto.getDescription());
+			 * 
+			 * }
+			 */
 			request.setAttribute("roleList", list);
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			request.setAttribute("roleList", new ArrayList());
 		}
 
 	}
 
 	protected boolean validate(HttpServletRequest request) {
 		boolean pass = true;
-		System.out.println("-------------validate started-------------");
-		
-		
+
 		if (DataValidator.isNull(request.getParameter("firstName"))) {
 			request.setAttribute("firstName", PropertyReader.getValue("error.require", "first Name"));
 			pass = false;
@@ -77,7 +75,6 @@ public class UserCtl extends BaseCtl {
 		} else if (!DataValidator.isName(request.getParameter("firstName"))) {
 			request.setAttribute("lastName", "please enter correct Name");
 			pass = false;
-
 		}
 		if (DataValidator.isNull(request.getParameter("password"))) {
 			request.setAttribute("password", PropertyReader.getValue("error.require", "password"));
@@ -119,40 +116,29 @@ public class UserCtl extends BaseCtl {
 		if (DataValidator.isNull(request.getParameter("dob"))) {
 			request.setAttribute("dob", PropertyReader.getValue("error.require", "dob"));
 			pass = false;
-		}else if (!DataValidator.isDate(request.getParameter("dob"))) {
+		} else if (!DataValidator.isDate(request.getParameter("dob"))) {
 			request.setAttribute("dob", PropertyReader.getValue("error.date", "Date Of Birth"));
 			pass = false;
-		}else if (!DataValidator.isAge(request.getParameter("dob"))) {
-			
+		} else if (!DataValidator.isAge(request.getParameter("dob"))) {
+
 			request.setAttribute("dob", "Age Must be greater then 18 year");
 			pass = false;
 		}
-		
+
 		if (!request.getParameter("password").equals(request.getParameter("confirmPassword"))
 				&& !"".equals(request.getParameter("confirmPassword"))) {
-			
-			request.setAttribute("confirmPassword","Confirm  Password  should  be matched.");
+
+			request.setAttribute("confirmPassword", "Confirm  Password  should  be matched.");
 			pass = false;
 		}
-		System.out.println(request.getParameter("dob"));
-		System.out.println("validate end " + pass+"................"+request.getParameter("id"));
-		System.out.println(request.getParameter("password"));
-		System.out.println(request.getParameter("confirmPassword"));
 		return pass;
 
 	}
 
 	protected BaseDTO populateDTO(HttpServletRequest request) {
-		UserDTO dto = new UserDTO();
 		
-         
-         System.out.println(request.getParameter("dob"));
- 		System.out.println("Populate end " + "................"+request.getParameter("id"));
- 		System.out.println("-------------------------------------------"+request.getParameter("password"));
- 		System.out.println(request.getParameter("confirmPassword"));
-         
-          
-   
+		UserDTO dto = new UserDTO();
+
 		dto.setId(DataUtility.getLong(request.getParameter("id")));
 
 		dto.setRoleId(DataUtility.getLong(request.getParameter("role")));
@@ -169,14 +155,12 @@ public class UserCtl extends BaseCtl {
 
 		dto.setGender(DataUtility.getString(request.getParameter("gender")));
 		dto.setMobileNo(DataUtility.getString(request.getParameter("mobileNo")));
-        
-		populateBean(dto,request);
-		
-		 System.out.println(request.getParameter("dob")+"......."+dto.getDob());
+
+		populateBean(dto, request);
+
 		log.debug("UserRegistrationCtl Method populatedto Ended");
 
 		return dto;
-
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -187,42 +171,42 @@ public class UserCtl extends BaseCtl {
 		UserModelInt model = ModelFactory.getInstance().getUserModel();
 		long id = DataUtility.getLong(request.getParameter("id"));
 		if (id > 0 || op != null) {
-		
-			UserDTO dto=null;
+			
+			UserDTO dto = null;
 			try {
 				dto = model.findByPK(id);
 				ServletUtility.setDto(dto, request);
 			} catch (Exception e) {
 				e.printStackTrace();
 				log.error(e);
-				ServletUtility.handleException(e, request, response);
+				ServletUtility.handleDBDown(getView(), request, response);
 				return;
 			}
 		}
 		ServletUtility.forward(getView(), request, response);
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException {
 		String op = DataUtility.getString(request.getParameter("operation"));
-		System.out.println("-------------------------------------------------------------------------dopost run-------");
 		// get model
 		UserModelInt model = ModelFactory.getInstance().getUserModel();
 		long id = DataUtility.getLong(request.getParameter("id"));
-		if (OP_SAVE.equalsIgnoreCase(op)||OP_UPDATE.equalsIgnoreCase(op)) {
+		if (OP_SAVE.equalsIgnoreCase(op) || OP_UPDATE.equalsIgnoreCase(op)) {
 			UserDTO dto = (UserDTO) populateDTO(request);
-          
 			try {
 				if (id > 0) {
 					model.update(dto);
 					ServletUtility.setSuccessMessage("Data is successfully Updated", request);
+					ServletUtility.setDto(dto, request);
 				} else {
-					
+
 					try {
-						 model.add(dto);
+						model.add(dto);
 						ServletUtility.setSuccessMessage("Data is successfully saved", request);
 					} catch (ApplicationException e) {
 						log.error(e);
-						ServletUtility.handleException(e, request, response);
+						ServletUtility.handleDBDown(getView(), request, response);
 						return;
 					} catch (DuplicateRecordException e) {
 						ServletUtility.setDto(dto, request);
@@ -230,11 +214,11 @@ public class UserCtl extends BaseCtl {
 					}
 
 				}
-				ServletUtility.setDto(dto, request);
-				
+			//	
+
 			} catch (ApplicationException e) {
 				log.error(e);
-				ServletUtility.handleException(e, request, response);
+				ServletUtility.handleDBDown(getView(), request, response);
 				return;
 			} catch (DuplicateRecordException e) {
 				ServletUtility.setDto(dto, request);
@@ -249,7 +233,7 @@ public class UserCtl extends BaseCtl {
 				return;
 			} catch (ApplicationException e) {
 				log.error(e);
-				ServletUtility.handleException(e, request, response);
+				ServletUtility.handleDBDown(getView(), request, response);
 				return;
 			}
 

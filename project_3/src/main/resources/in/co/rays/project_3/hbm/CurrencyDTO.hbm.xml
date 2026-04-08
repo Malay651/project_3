@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="in.co.rays.project_3.dto">
+
+    <class name="CurrencyDTO" table="ST_CURRENCY">
+
+        <!-- Primary Key -->
+        <id name="id" type="java.lang.Long">
+            <column name="ID"/>
+            <generator class="increment"/>
+        </id>
+
+        <!-- Currency Code -->
+        <property name="currencyCode" type="java.lang.String">
+            <column name="CURRENCY_CODE"/>
+        </property>
+
+        <!-- Currency Name -->
+        <property name="currencyName" type="java.lang.String">
+            <column name="CURRENCY_NAME"/>
+        </property>
+
+        <!-- Symbol -->
+        <property name="symbol" type="java.lang.String">
+            <column name="SYMBOL"/>
+        </property>
+
+        <!-- Status -->
+        <property name="status" type="java.lang.String">
+            <column name="STATUS"/>
+        </property>
+
+        <!-- Common Fields (Same as UserDTO) -->
+        <property name="createdBy" type="java.lang.String" length="50">
+            <column name="CREATED_BY"/>
+        </property>
+
+        <property name="modifiedBy" type="java.lang.String" length="50">
+            <column name="MODIFIED_BY"/>
+        </property>
+
+        <property name="createdDatetime" type="java.sql.Timestamp">
+            <column name="CREATED_DATETIME"/>
+        </property>
+
+        <property name="modifiedDatetime" type="java.sql.Timestamp">
+            <column name="MODIFIED_DATETIME"/>
+        </property>
+
+    </class>
+
+</hibernate-mapping>
